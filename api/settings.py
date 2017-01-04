@@ -5,7 +5,7 @@
 # from py2neo.ext import ogm
 GRAPH_DATABASE = 'http://neo4j_eve:7474/db/data/'
 GRAPH_USER = 'neo4j'
-GRAPH_PASSWORD = 'neo4j'
+GRAPH_PASSWORD = 'njpa_reil123'
 
 # TODO: Override this as a default when using Neo4j as a data layer
 ITEM_URL = 'regex("[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}")'
