@@ -3,7 +3,7 @@
 # import py2neo.ogm as ogm
 # of
 # from py2neo.ext import ogm
-GRAPH_DATABASE = 'http://neo4j_eve:7474/db/data/'
+GRAPH_DATABASE = 'http://neo4j:7474/db/data/'
 GRAPH_USER = 'neo4j'
 GRAPH_PASSWORD = 'njpa_reil123'
 

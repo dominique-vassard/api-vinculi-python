@@ -14,15 +14,21 @@ docker run -d --name neo4j_eve \
 --env NEO4J_AUTH=neo4j/njpa_reil123 \
 dominiquev/neo4j:3.1.0
 ```
-    `docker run -d --name neo4j_eve --env NEO4J_AUTH=none  -p 7474:7474 -p 7687:7687 neo4j:3.1.0`
+
 2. Build eve application image
-`docker build -t test_eve:v1 .`
+`docker build -t dominiquev/eve-app:0.0 .`
+
 3. Run eve application container
 ```
 docker run  --name api_eve \
  -p 5000:5000 \
  --link=neo4j_eve \
- -v $(pwd):/home/app
+ -v $(pwd):/home/app \
  dominiquev/eve-app:0.0
 ```
 In case of problem, you can use the holder.py and docker exec the container
+
+OR
+
+via docker-compose:
+`docker-compose up -d`
