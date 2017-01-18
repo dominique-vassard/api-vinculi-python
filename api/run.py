@@ -1,6 +1,16 @@
-from eve import Eve
-from eve_neo4j import Neo4j
+from flask import Flask
+from flask_restplus import Resource, Api
 
 
-app = Eve(data=Neo4j)
-app.run(host='0.0.0.0', debug=True)
+app = Flask(__name__)
+api = Api(app)
+
+
+@api.route('/hello')
+class HelloWorld(Resource):
+    def get(self):
+        return {'hello': 'world'}
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
