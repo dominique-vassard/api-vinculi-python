@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, json
 from flask_restplus import Resource, Api, fields
 
 # Database
@@ -9,7 +9,7 @@ import marshmallow
 
 
 app = Flask(__name__)
-api = Api(app, version='1.0', title='Vinculi API', description='API for rquesting Vinculi graph database')
+api = Api(app, version='1.0', title='Vinculi API', description='API for requesting Vinculi graph database')
 
 # Manage DB connection
 uri = "bolt://localhost:7687"
@@ -22,6 +22,14 @@ driver = GraphDatabase.driver(uri, auth=auth_token)
 class HelloWorld(Resource):
     def get(self):
         return {'hello': 'world'}
+
+@api.route('/export-docs')
+class ExportDocs(Resource):
+    def get(self):
+        urlvars = False  # Build query strings in URLs
+        swagger = True  # Export Swagger specifications
+        data = api.as_postman(urlvars=urlvars, swagger=swagger)
+        return json.dumps(data)
 
 
 # Complete test

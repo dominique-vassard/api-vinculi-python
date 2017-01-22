@@ -1,0 +1,67 @@
+{
+  "description": "API for requesting Vinculi graph database",
+  "folders": [
+    {
+      "collectionId": "cd194985-919f-5887-8660-1b5a6dc2b181",
+      "description": "Default namespace",
+      "id": "3c13d81e-39f0-530c-b71e-e12fd47ee7f9",
+      "name": "default",
+      "order": [
+        "c55d9fb4-4868-539a-9119-7636466149ca",
+        "c6280e45-b582-5692-b00b-f161038fcd4a",
+        "72a7cc07-ce86-510e-b391-3fedce6f2ed4"
+      ]
+    }
+  ],
+  "id": "cd194985-919f-5887-8660-1b5a6dc2b181",
+  "name": "Vinculi API 1.0",
+  "order": [
+    "760581cb-711b-56a0-9861-291d296ca522"
+  ],
+  "requests": [
+    {
+      "collectionId": "cd194985-919f-5887-8660-1b5a6dc2b181",
+      "description": "The API Swagger specifications as JSON",
+      "headers": "",
+      "id": "760581cb-711b-56a0-9861-291d296ca522",
+      "method": "GET",
+      "name": "Swagger specifications",
+      "time": 1485086533,
+      "url": "http://localhost:5000/swagger.json"
+    },
+    {
+      "collectionId": "cd194985-919f-5887-8660-1b5a6dc2b181",
+      "folder": "3c13d81e-39f0-530c-b71e-e12fd47ee7f9",
+      "headers": "",
+      "id": "c55d9fb4-4868-539a-9119-7636466149ca",
+      "method": "GET",
+      "name": "get_export_docs",
+      "time": 1485086533,
+      "url": "http://localhost:5000/export-docs"
+    },
+    {
+      "collectionId": "cd194985-919f-5887-8660-1b5a6dc2b181",
+      "folder": "3c13d81e-39f0-530c-b71e-e12fd47ee7f9",
+      "headers": "",
+      "id": "c6280e45-b582-5692-b00b-f161038fcd4a",
+      "method": "GET",
+      "name": "get_hello_world",
+      "time": 1485086533,
+      "url": "http://localhost:5000/hello"
+    },
+    {
+      "collectionId": "cd194985-919f-5887-8660-1b5a6dc2b181",
+      "folder": "3c13d81e-39f0-530c-b71e-e12fd47ee7f9",
+      "headers": "X-Fields:",
+      "id": "72a7cc07-ce86-510e-b391-3fedce6f2ed4",
+      "method": "GET",
+      "name": "get_node",
+      "pathVariables": {
+        "uuid": ""
+      },
+      "time": 1485086533,
+      "url": "http://localhost:5000/node/:uuid"
+    }
+  ],
+  "timestamp": 1485086533
+}
