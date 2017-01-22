@@ -9,7 +9,7 @@ import marshmallow
 
 
 app = Flask(__name__)
-api = Api(app)
+api = Api(app, version='1.0', title='Vinculi API', description='API for rquesting Vinculi graph database')
 
 # Manage DB connection
 uri = "bolt://localhost:7687"
@@ -38,8 +38,10 @@ node_model = api.model('Node', {
 
 
 @api.route('/node/<string:uuid>')
+@api.doc(params={'uuid': 'A valid node unique id'})
 class Node(Resource):
-    @api.marshal_with(node_model)
+    @api.marshal_with(node_model, code=200, description='Success')
+    @api.doc('get_node')
     def get(self, uuid):
         params = {'uuid': uuid}
         params, errors = NodeSchema().load(params);
