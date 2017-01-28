@@ -65,7 +65,7 @@ def to_jgf(query_result):
                 'type': list(record[0].labels)[0],
                 'label': get_label(list(record[0].labels)[0],
                                    dict(record[0].items())),
-                'metarecord': dict(record[0].items())
+                'metadata': dict(record[0].items())
             })
         else:
             pass
@@ -73,15 +73,15 @@ def to_jgf(query_result):
     return jgf
 
 
-def get_label(obj_type, metarecord):
+def get_label(obj_type, metadata):
     label = ''
     if obj_type == "Person":
-        label = "{} {}".format(metarecord['firstName'], metarecord['lastName'])
+        label = "{} {}".format(metadata['firstName'], metadata['lastName'])
     elif obj_type == "Publication":
-        label = metarecord['title']
+        label = metadata['title']
     elif obj_type in ("Year", "Month", "Day"):
-        label = metarecord['value']
+        label = metadata['value']
     else:
-        label = metarecord.get('name', '')
+        label = metadata.get('name', '')
 
     return label
