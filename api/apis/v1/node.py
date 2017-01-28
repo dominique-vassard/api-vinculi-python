@@ -3,6 +3,7 @@ from flask import request
 import marshmallow
 
 from apis.auth import requires_auth
+import core.utils.validation as validation
 import core.models.node as node_model
 from apis.v1.blueprint import api
 
@@ -22,6 +23,11 @@ class NodeSchema(marshmallow.Schema):
 class labelSchema(marshmallow.Schema):
     label = marshmallow.fields.Str()
 
+    @marshmallow.validates('label')
+    def validate_label(self, value):
+        if value not in ('Person', 'Year'):
+            raise marshmallow.ValidationError('Invalid label.')
+
 
 authorizations = {
     'basic_auth': {
@@ -30,14 +36,6 @@ authorizations = {
         'name': 'X-API-KEY'
     }
 }
-
-
-def validate_params(params, schema):
-    params, errors = schema.load(params)
-    if errors:
-        return errors
-    else:
-        return params
 
 
 @api.route('/node/<string:uuid>')
@@ -61,7 +59,7 @@ class Node(Resource):
 class NodeByLabel(Resource):
     @requires_auth
     @api.doc('get_nodes_by_label')
+    @validation.validate(labelSchema())
     def get(self, **params):
-        params = validate_params(params, labelSchema())
+        print params
         return node_model.get_nodes_by_label(params['label'])
-
