@@ -1,0 +1,316 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>core.utils package &mdash; Vinculi API 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Vinculi API 0.1 documentation" href="index.html"/>
+        <link rel="up" title="core package" href="core.html"/>
+        <link rel="prev" title="core.models package" href="core.models.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Vinculi API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="documentation.html">Generate this doc</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="core.html">core package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="core.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="core.models.html">core.models package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">core.utils package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-core.utils.export">core.utils.export module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-core.utils.validation">core.utils.validation module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-core.utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="core.html#module-core">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Vinculi API</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="core.html">core package</a> &raquo;</li>
+      
+    <li>core.utils package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/core.utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="core-utils-package">
+<h1>core.utils package<a class="headerlink" href="#core-utils-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-core.utils.export">
+<span id="core-utils-export-module"></span><h2>core.utils.export module<a class="headerlink" href="#module-core.utils.export" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="core.utils.export.export_to">
+<code class="descclassname">core.utils.export.</code><code class="descname">export_to</code><span class="sig-paren">(</span><em>query_result</em>, <em>export_type</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/utils/export.html#export_to"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#core.utils.export.export_to" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export query result to a given format</p>
+<p>Available format: JGF</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>query_result</strong> (<em>neo4j.v1.bolt.BoltStatementResult</em>) &#8211; A query result</li>
+<li><strong>export_type</strong> (<em>str</em>) &#8211; The desired format</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A formatted result</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">(str|dict)</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><code class="xref py py-exc docutils literal"><span class="pre">(Exception)</span></code> &#8211; If format is nopt valid</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="core.utils.export.get_label">
+<code class="descclassname">core.utils.export.</code><code class="descname">get_label</code><span class="sig-paren">(</span><em>obj_type</em>, <em>metadata</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/utils/export.html#get_label"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#core.utils.export.get_label" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="core.utils.export.to_jgf">
+<code class="descclassname">core.utils.export.</code><code class="descname">to_jgf</code><span class="sig-paren">(</span><em>query_result</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/utils/export.html#to_jgf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#core.utils.export.to_jgf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert query rsult to JGF format (<a class="reference external" href="http://jsongraphformat.info/">http://jsongraphformat.info/</a>)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>query_result</strong> (<em>neo4j.v1.bolt.BoltStatementResult</em>) &#8211; A query result</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A JGF dictionnary froamtted as :<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;graph&quot;</span><span class="p">:</span>
+    <span class="s2">&quot;edges&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="s2">&quot;nodes&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">The</span> <span class="n">node</span> <span class="nb">id</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="n">The</span> <span class="n">node</span> <span class="nb">type</span> <span class="p">(</span><span class="n">label</span> <span class="ow">in</span> <span class="n">Neo4j</span> <span class="n">language</span><span class="p">)</span>
+            <span class="s2">&quot;metadata&quot;</span><span class="p">:</span> <span class="n">The</span> <span class="n">node</span> <span class="n">metadata</span> <span class="p">(</span><span class="n">properties</span> <span class="ow">in</span> <span class="n">Neo4j</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">(dict)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-core.utils.validation">
+<span id="core-utils-validation-module"></span><h2>core.utils.validation module<a class="headerlink" href="#module-core.utils.validation" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="core.utils.validation.validate">
+<code class="descclassname">core.utils.validation.</code><code class="descname">validate</code><span class="sig-paren">(</span><em>schema</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/utils/validation.html#validate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#core.utils.validation.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>[Decorator] Validate input parameters with the given schema</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>schema</strong> (<em>marshmallow schema</em>) &#8211; The schema to use for validation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">func with valiadted params
+or
+deatiled error</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-core.utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-core.utils" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="core.models.html" class="btn btn-neutral" title="core.models package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Dominique VASSARD &lt;dominique.vassard@gmail.com&gt;.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
