@@ -1,10 +1,12 @@
 from flask_restplus import Resource, fields
-import marshmallow
 
+from apis.v1.blueprint import api
 from apis.auth import requires_auth
 import core.utils.validation as validation
+import core.schemas.node_input as input_schemas
+from core.schemas.graph_output import get_graph_output_schema
+from core.schemas.node_output import get_node_output_schema
 import core.models.node as node_model
-from apis.v1.blueprint import api
 
 
 node_api_model = api.model('Node', {
@@ -13,40 +15,17 @@ node_api_model = api.model('Node', {
 })
 
 
-#   Validation
-class NodeSchema(marshmallow.Schema):
-    uuid = marshmallow.fields.Str()
-    firstName = marshmallow.fields.Str()
-
-
-class labelSchema(marshmallow.Schema):
-    label = marshmallow.fields.Str()
-
-    @marshmallow.validates('label')
-    def validate_label(self, value):
-        if value not in ('Person', 'Year'):
-            raise marshmallow.ValidationError('Invalid label.')
-
-
-authorizations = {
-    'basic_auth': {
-        'type': 'apiKey',
-        'in': 'header',
-        'name': 'X-API-KEY'
-    }
-}
-
-
 @api.route('/node/<string:uuid>')
 @api.doc(params={'uuid': 'A valid node unique id'},
          security='basic_auth')
 class Node(Resource):
     @requires_auth
-    @api.marshal_with(node_api_model, code=200, description='Success')
+    @api.marshal_with(get_node_output_schema(api),
+                      code=200, description='Success')
     @api.doc('get_node')
     def get(self, uuid):
         params = {'uuid': uuid}
-        params, errors = NodeSchema().load(params)
+        params, errors = input_schemas.NodeSchema().load(params)
         if errors:
             return errors
         return node_model.get_node_by_uuid(**params)
@@ -58,6 +37,7 @@ class Node(Resource):
 class NodeByLabel(Resource):
     @requires_auth
     @api.doc('get_nodes_by_label')
-    @validation.validate(labelSchema())
+    @api.response(200, 'Success', get_graph_output_schema(api))
+    @validation.validate(input_schemas.labelSchema())
     def get(self, **params):
         return node_model.get_nodes_by_label(params['label'])
