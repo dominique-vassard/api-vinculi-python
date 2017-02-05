@@ -6,7 +6,7 @@ SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 SPHINXPROJ    = VinculiAPI
 SOURCEDIR     = source
-BUILDDIR      = ../../api_vinculi_python_docs/build
+BUILDDIR      = ../../../api_vinculi_python_docs
 PDFBUILDDIR   = /tmp
 PDF           = ../manual.pdf
 
