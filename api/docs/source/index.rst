@@ -15,6 +15,8 @@ For endpoints documentation, please see Swagger documentation (link)
    Generate this doc <documentation.rst>
 
 
+.. include:: ../../README.rst
+
 Core documentation
 ==================
 .. include:: modules.rst

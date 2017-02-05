@@ -6,7 +6,16 @@ SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 SPHINXPROJ    = VinculiAPI
 SOURCEDIR     = source
-BUILDDIR      = build
+BUILDDIR      = ../../api_vinculi_python_docs/build
+PDFBUILDDIR   = /tmp
+PDF           = ../manual.pdf
+
+latexpdf:
+	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(PDFBUILDDIR)/latex
+	@echo "Running LaTeX files through pdflatex..."
+	make -C $(PDFBUILDDIR)/latex all-pdf
+	cp $(PDFBUILDDIR)/latex/*.pdf $(PDF)
+	@echo "pdflatex finished; see $(PDF)"
 
 # Put it first so that "make" without argument is like "make help".
 help:
