@@ -1,5 +1,4 @@
 from functools import wraps
-from flask import abort
 
 
 def validate(schema):
@@ -17,7 +16,6 @@ def validate(schema):
     def decorated(func):
         @wraps(func)
         def inner(*args, **kwargs):
-            print kwargs
             params, errors = schema.load(kwargs)
             if errors:
                 return {

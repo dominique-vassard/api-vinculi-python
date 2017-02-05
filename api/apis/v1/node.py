@@ -1,5 +1,4 @@
 from flask_restplus import Resource, fields
-from flask import request
 import marshmallow
 
 from apis.auth import requires_auth
@@ -61,5 +60,4 @@ class NodeByLabel(Resource):
     @api.doc('get_nodes_by_label')
     @validation.validate(labelSchema())
     def get(self, **params):
-        print params
         return node_model.get_nodes_by_label(params['label'])

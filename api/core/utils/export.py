@@ -24,7 +24,6 @@ def export_to(query_result, export_type):
         raise Exception(msg)
 
     result = []
-    print(type(query_result))
     if export_type == 'JGF':
         result = to_jgf(query_result)
 
