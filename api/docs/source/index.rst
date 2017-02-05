@@ -6,11 +6,18 @@
 Welcome to Vinculi API's documentation!
 =======================================
 
+For endpoints documentation, please see Swagger documentation (link)
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
+   Generate this doc <documentation.rst>
 
+
+Core documentation
+==================
+.. include:: modules.rst
 
 Indices and tables
 ==================
